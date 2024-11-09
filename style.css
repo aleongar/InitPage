@@ -1,0 +1,177 @@
+body{
+    background-color: #111;
+    color: white;
+}
+
+.bordered{
+    border: 5px solid white;
+    border-collapse: collapse;
+    border-spacing: 1em;
+    text-align: center;
+    font-size: xx-large;
+    color:white;
+    transition: color 100ms;
+    transition: background-color 100ms;
+    text-decoration: none;
+}
+
+.bordered:hover{
+    background-color: white;
+    color: black;
+}
+
+h1{
+    text-align: center;
+    font-size: 5rem;
+}
+
+.tcenter{
+    text-align: center;
+}
+
+div.tcenter{
+    font-size: 3em;
+}
+
+.dcenter{
+    max-width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gblue{
+    color: #4285f4
+}
+
+.ggreen{
+    color: #34a853
+}
+
+.gyellow{
+    color:#fbbc05
+}
+
+.gred{
+    color:#ea4335
+}
+
+.ytcolor{
+    color:#c4302b
+}
+
+.dflex{
+    display: flex;
+    flex-grow: 1;
+}
+
+.flexrow{
+    flex-direction: row;
+}
+
+.flexcol{
+    flex-direction: column;
+}
+
+#search{
+    background-color: black;
+    width: 80%;
+    height: auto;
+    margin: 2em auto;
+    box-shadow:  -10px 0 0 0 white,
+                 10px 0 0 0 white,
+                 0 -10px 0 0 white,
+                 0 10px 0 0 white;
+    display: flex;
+}
+
+#search > input{
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    flex-grow: 2;
+    outline: none;
+    border: none;
+}
+
+input{
+    caret: white underscore;
+}
+
+::selection {
+    background-color: #FFD700;
+    color: #000;
+}
+
+#search > input:focus, #search > input:hover{
+    outline: none;
+    border: none;
+}
+
+.jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.jersey-25-regular {
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pixel-font{
+    font-family: Pixel-Font;
+    font-size: larger;
+}
+
+.blinking-text {
+    display: inline-block;
+    animation: blink 1.5s steps(2, start) infinite;
+    color: white;
+}
+
+.button{
+    border: white 5px;
+    background-color: black;
+    cursor:pointer;
+    transition: background-color 150ms;
+    transition: color 150ms;
+    font-family: Pixel-Font;
+    color: white;
+    font-size: larger;
+}
+
+.tbutton{
+    width: 100%;
+    background-color: inherit;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+}
+
+@font-face {
+    font-family: Pixel-Font;
+    src: url(fonts/Unifontexmono-DYWdE.ttf);
+}
+
+@font-face {
+    font-family: "Jersey 10";
+    src: url(fonts/Jersey10-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Jersey 25";
+    src: url(fonts/Jersey25-Regular.ttf);
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
