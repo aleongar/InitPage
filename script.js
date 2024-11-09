@@ -12,10 +12,18 @@ async function writtingEffect(){
         console.log(char)
         title.innerText = title.innerText.replace("_", char);
         title.innerText += "_";
-        await sleep(100);
+        await sleep(200);
     }
     title.innerText = title.innerText.replace("_","");
     title.innerHTML += "<span class='blinking-text'>_</span>"
+}
+
+function openModal() {
+    document.getElementById("myModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
 }
 
 function startup(){

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Start page</title>
-    <script src="script.js"></script>
+    <script async src="script.js"></script>
 </head>
 <body onload="startup()">
     <h1 id="title" class="jersey-25-regular">
@@ -18,7 +18,7 @@
         <input name="q" class="jersey-10-regular" type="text">
         <button type="submit" class="button">🔎</button>
     </form>
-    <div class="dcenter pixel-font dflex">
+    <div class="dcenter pixel-font dflex flexrow">
         <a href="https://autentica.cpd.ua.es/cas/login?service=https%3a%2f%2fcvnet.cpd.ua.es%2fuacloud%2fhome%2findexverificado" class="dflex bordered flexcol">
             <div>🏫</div>
             <div class="">
@@ -43,6 +43,38 @@
                 <span class="gblue">G</span><span class="gred">O</span><span class="gyellow">O</span><span class="gblue">G</span><span class="ggreen">L</span><span class="gred">E</span>
             </div>
         </a>
+    </div>
+    <div class="others jersey-10-regular">
+        <div class="dflex flex-spbw">
+            <div>Other webpages</div>
+            <button onclick="openModal()" class="button-add jersey-10-regular">Add page</button>
+        </div>
+        <hr>
+        <div class="">
+            hola
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="dflex flex-spbw modal-navigation">
+                <div>Add page</div>
+                <button onclick="closeModal()" class="button-close jersey-10-regular">X</button>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <form class="dflex flexcol flex-left" onsubmit="return false;">
+                    <span>Webpage name:</span>
+                    <input name="webname" class="modal-input jersey-10-regular" type="text">
+                    <br>
+                    <span>Icon:</span>
+                    <input name="icon" class="modal-input modal-input-1char jersey-10-regular" type="text" maxlength="1">
+                    <br>
+                    <span>URL:</span>
+                    <input name="url" class="modal-input jersey-10-regular" type="text">
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>

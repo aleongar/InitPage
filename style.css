@@ -61,20 +61,29 @@ div.tcenter{
 
 .dflex{
     display: flex;
-    flex-grow: 1;
+    flex-wrap: wrap;
 }
 
 .flexrow{
     flex-direction: row;
+    width: 100%;
 }
 
 .flexcol{
     flex-direction: column;
 }
 
+.flex-spbw{
+    justify-content: space-between;
+}
+
+.flex-left{
+    align-items: flex-start;
+}
+
 #search{
     background-color: black;
-    width: 80%;
+    width: 70%;
     height: auto;
     margin: 2em auto;
     box-shadow:  -10px 0 0 0 white,
@@ -91,6 +100,7 @@ div.tcenter{
     flex-grow: 2;
     outline: none;
     border: none;
+    width: 100%;
 }
 
 input{
@@ -108,7 +118,7 @@ input{
 }
 
 .jersey-10-regular {
-    font-family: "Jersey 10", sans-serif;
+    font-family: "Jersey 10", sans-serif !important;
     font-weight: 400;
     font-style: normal;
   }
@@ -135,11 +145,41 @@ input{
     border: white 5px;
     background-color: black;
     cursor:pointer;
-    transition: background-color 150ms;
-    transition: color 150ms;
+    transition: background-color 200ms;
+    transition: color 200ms;
     font-family: Pixel-Font;
     color: white;
     font-size: larger;
+}
+
+.button-add{
+    border: white 5px;
+    background-color: initial;
+    cursor:pointer;
+    transition: background-color 200ms;
+    transition: color 200ms;
+    color: #66bb6a;
+    font-size: inherit;
+}
+
+.button-add:hover{
+    background-color: #66bb6a;
+    color: black;
+}
+
+.button-close{
+    border: white 5px;
+    background-color: initial;
+    cursor:pointer;
+    transition: background-color 200ms;
+    transition: color 200ms;
+    color: #e74c3c;
+    font-size: inherit;
+}
+
+.button-close:hover{
+    background-color: #e74c3c;
+    color: black;
 }
 
 .tbutton{
@@ -150,6 +190,87 @@ input{
 .button:hover{
     background-color: white;
     color: black;
+}
+
+.others{
+    width: 70%;
+    height: auto;
+    margin: 2em auto;
+    box-shadow:  -10px 0 0 0 white,
+                 10px 0 0 0 white,
+                 0 -10px 0 0 white,
+                 0 10px 0 0 white;
+    font-size: 3em;
+    padding: 0 0.2em;
+    padding-right: 0;
+}
+
+hr{
+    margin: 0 -0.4em;
+    margin-right: -0.2em;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 5px solid white;
+}
+
+/* Estilo general del modal */
+.modal {
+    display: none; /* Por defecto está oculto */
+    position: fixed;
+    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+    justify-content: center;
+    align-items: center;
+    font-family: "Jersey 10", sans-serif;
+}
+
+/* Contenedor del contenido del modal */
+.modal-content {
+    background-color: #222; /* Fondo oscuro del modal */
+    color: white;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow:  -10px 0 0 0 white,
+    10px 0 0 0 white,
+    0 -10px 0 0 white,
+    0 10px 0 0 white;
+}
+
+.modal-navigation{
+    font-size: 2em;
+    margin-left: 4px;
+}
+
+/* Estilo del encabezado del modal */
+.modal-header {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+/* Estilo del texto dentro del modal */
+.modal-body {
+    padding: 0 10px;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    font-size: 2em;
+}
+
+.modal-input{
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    outline: none;
+    border: 5px white solid;
+}
+
+.modal-input-1char{
+    width: 1.5em;
+    text-align: center;
 }
 
 @font-face {
