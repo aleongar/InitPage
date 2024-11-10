@@ -117,7 +117,7 @@ function getWebpages(){
     request.onsuccess = function(event) {
         console.log("Webs obtenidas", event.target.result);
         if(event.target.result.length == 0){
-            document.getElementById("otherChart").innerText("Click on \"Add page\" button to add a web");
+            document.getElementById("otherChart").innerText = "Click on \"Add page\" button to add a web";
         }
         event.target.result.forEach(element => {
             addToChart(element)
