@@ -50,8 +50,7 @@
             <button onclick="openModal()" class="button-add jersey-10-regular">Add page</button>
         </div>
         <hr>
-        <div class="">
-            hola
+        <div style="padding-bottom: 10px" id="otherChart" class="dflex dcenter pixel-font flexrow">
         </div>
     </div>
 
@@ -63,15 +62,16 @@
             </div>
             <hr>
             <div class="modal-body">
-                <form class="dflex flexcol flex-left" onsubmit="return false;">
+                <form id="modalForm" class="dflex flexcol flex-left" onsubmit="return false;">
                     <span>Webpage name:</span>
                     <input name="webname" class="modal-input jersey-10-regular" type="text">
                     <br>
                     <span>Icon:</span>
-                    <input name="icon" class="modal-input modal-input-1char jersey-10-regular" type="text" maxlength="1">
+                    <input name="icon" class="modal-input modal-input-1char jersey-10-regular" type="text" maxlength="3">
                     <br>
                     <span>URL:</span>
                     <input name="url" class="modal-input jersey-10-regular" type="text">
+                    <button onclick="addWebpage()" style="margin-top: 20px; margin-bottom: -20px; align-self: center" class="button-add jersey-10-regular">Add</button>
                 </form>
             </div>
         </div>

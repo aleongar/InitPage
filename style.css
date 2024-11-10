@@ -271,6 +271,7 @@ hr{
 .modal-input-1char{
     width: 1.5em;
     text-align: center;
+    font-family: Pixel-Font !important;
 }
 
 @font-face {
