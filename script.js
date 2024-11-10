@@ -1,9 +1,11 @@
 const initialText = "StartPage";
 let db;
+let modalOpen = false;
 async function startup(){
     writtingEffect();
     db = await dbConnection();
     getWebpages();
+    setKeys();
 }
 
 async function dbConnection() {
@@ -74,10 +76,12 @@ async function writtingEffect(){
 }
 
 function openModal() {
+    modalOpen = true;
     document.getElementById("myModal").style.display = "flex";
 }
 
 function closeModal() {
+    modalOpen = false;
     document.getElementById("myModal").style.display = "none";
 }
 
@@ -138,4 +142,15 @@ function addToChart(data){
             </div>
         </a>
     `;
+}
+
+function setKeys(){
+    document.addEventListener(
+        "keydown",
+        (event) => {
+            const keyName = event.key;
+            if(keyName === 'Escape' && modalOpen){
+                closeModal();
+            }
+        });
 }

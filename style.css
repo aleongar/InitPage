@@ -59,6 +59,10 @@ div.tcenter{
     color:#c4302b
 }
 
+.amzcolor{
+    color: #FF9900
+}
+
 .dflex{
     display: flex;
     flex-wrap: wrap;
