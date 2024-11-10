@@ -13,6 +13,7 @@ body{
     transition: color 100ms;
     transition: background-color 100ms;
     text-decoration: none;
+    margin: 0 2.5px
 }
 
 .bordered:hover{
